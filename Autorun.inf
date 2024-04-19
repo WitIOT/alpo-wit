@@ -1,0 +1,13 @@
+[autorun]
+action=Alpao deformable mirrors Driver & SDK
+label=ALPAO-DM
+open=setup.exe
+icon=setup.exe,0
+
+[Content]
+MusicFiles=0
+PictureFiles=0
+VideoFiles=0
+
+[DeviceInstall]
+DriverPath=Drivers

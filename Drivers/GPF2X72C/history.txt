@@ -1,0 +1,176 @@
+[Revision History]
+Version: 03.20-32
+Date: January 2016
+--The following OS supported
+  Windows 10 (x64)
+  Windows 10 IoT Enterprise (x64)
+--The following languages supported
+  Microsoft Visual C++ 2015
+  Microsoft Visual C# 2015
+  Microsoft Visual Basic 2015
+--The following products supported
+  PEX-H291244,PEX-H292244 
+
+Version: 03.10-09
+Date: February 2015
+--The following OS supported
+  Windows 8 (x64)
+  Windows 8.1 (x64)
+  Windows Server 2012
+  Windows Server 2012 R2
+--The following languages supported
+  Microsoft Visual C++ 2012
+  Microsoft Visual C# 2012
+  Microsoft Visual Basic 2012
+  Microsoft Visual C++ 2013
+  Microsoft Visual C# 2013
+  Microsoft Visual Basic 2013 
+--64-bit OS supported
+--The following functions added
+ -DioBmGetDriverInfo
+ -DioBmSetPhysicalMemorysSize
+--The DioBm utility program added
+--Sample programs are supported in the 64-bit environment.
+--The following mulfanction fixed
+ -The PCI-2472C was not normally installed.
+ -When pattern matching end was enabled in the bus master conditons, 
+  the setting was not reflected and the pattern matching trigger
+  cannot be used as termination conditon.
+ -When the unit size of DMA transfer buffer was 4 KB in 64-bit environment,
+  continuous sampling input/output were not normaly operated.
+ -In 64-bit environment,the DioBmAllocateBuffer function was not executed. 
+
+Version: 02.00-08
+Date: March 2011
+--The following OS supported
+  Microsoft Windows 7
+  Microsoft Windows Embedded Standard
+  Microsoft Windows Server 2008
+  Microsoft Windows Vista
+  Windows XP Embedded
+--The following languages supported
+  Microsoft Visual C++ 2010
+  Microsoft Visual C# 2010
+  Microsoft Visual Basic 2010
+  Microsoft Visual C++ 2008
+  Microsoft Visual C# 2008
+  Microsoft Visual Basic 2008  
+  Microsoft Visual C++ 2005
+  Microsoft Visual C# 2005
+  Microsoft Visual Basic 2005
+  Microsoft Visual C++ .NET
+  Microsoft Visual C# .NET
+  Microsoft Visual Basic .NET
+  Borland Delphi 8.0 
+--The following products supported
+  LPC-291144, LPC-292144
+  PEX-291144, PEX-292144
+  CSI-291144, CSI-292144
+  CPZ-292244, CPZ-291244
+ -Sample programs and class libraries for .NET added
+ -Help format changed from html format to pdf format.
+ -Description for .NET was included in help.
+ -Setup.exe(install program) was updated.
+ -The default setting values of sample programs changed
+  so that the value supports the CSI/CBI/LPC/PEX-29x144.
+ -The following expansion functions for PCI-2772C (revision ID 3 or later) added 
+  DioBmSetClearMode, 
+  DioBmGetClearMode
+ -The DioBmClearSamplingOutput function supported PCI-2772C (revision ID 3 or later).
+ -A function to stop at the specific number of data supported 
+  (CPZ-292244, CPZ-291244, CBI-291144, CBI-292144)
+--The following mulfunctions fixed
+ -Interrupt events were not generated under the specific condition.
+ -Successive interruption to the SMP environment caused blue screan. 
+ -Executing the DioBmEnd or DioBmClose function caused blue screen. 
+ -The device name may not be normally displayed in the Device Manager. 
+ -The last data was not transfered successfully by DMA transfer depending
+  on the configured number of data.
+ -If a callback function was registered by the digital input all input signals,
+  the digital output callback function was called at the unexpected time 
+  when a callback function was registered by the digital output interrupt event.
+ -The DioSetEventEx function did not work normally if a buffer to store events were not pointed.
+ -An error occured when the DioBmSetDeviceConfigEx function specifies DIOBM_LOW. 
+ -When an interruption that can be used for both digital input and 
+  digital output was configured, the setting value was overwritten.
+ -When the DMA transfer counter counted over 8000000h of data in the DioBmGetData,
+  the number of retrieved data had an error.  
+ -A counter matching detection was generated at at the number of data specified 
+  by the DioBmSetCounterEventConfig plus one data.
+ -Input value was not retrieved when input signal and output signal are assigned 
+  to different ports and used simultaneously for DMA transfer in CBI-291144.
+--When sampling and successive output stopes under errornous state,
+  the state is recovered by forced initialization by the DioBmClose function. 
+
+Version: 01.13-07
+Date: November 2004
+-- Windows Server2003 supported.
+-- The following cards supported.
+[Windows XP/Server2003/2000]
+CBI-291144, CBI-291144TR, CBI-291144TK, CBI-291144TKA, CBI-291144TL, 
+CBI-291144TLA, CBI-292144, CBI-292144TR, CBI-292144TK, CBI-292144TKA, 
+CBI-292144TL, CBI-292144TLA 
+--The following functions supported for the CBI-291144/Tx, CBI-292144/Tx.
+  DioBmSetEdEventConfig, DioBmGetEdEventConfig, DioBmSetEventEx, 
+  DioBmSetFilter, DioBmGetFilter, DioBmClearSamplingOutput
+The following malfunctions were fixed.
+[Windows XP/Server2003/2000/NT/Me/98/95]
+-- When the usinng strobe output mode of the PCI/PAZ-2772C, low-level output of
+   the STB signal and setup time cannot be simultaneously configured.
+-- When using the DioBmSetData function, the number of configurable data are 
+   limited at the time of adding data again after data output is completed.
+
+Version: 01.12-06
+Date: February 2004
+-- Delphi version 7.0 supported.
+The following malfunctions were fixed.
+[Windows XP/2000/NT/Me/98/95]
+-- When the request mode is specified on the PCI/PAZ-2742C,
+   an parameter error occurred.
+-- When the strobe mode is specified on the
+   PCI/PAZ-2772C, the transfer is failed to stop by using
+   the stop signal.
+
+Version: 01.11-05
+Date: October 2003
+The following malfunction was fixed.
+-- The STB2 pulse width may not be configured correctly 
+   at the DO strobe mode on the PCI-2772C.
+
+Version: 01.10-04
+Date: May 2003
+The following boards supported.
+[PCI expansion boards (PAZ series)]
+PAZ-2172C, PAZ-2472C, PAZ-2772C
+The following malfunctions was fixed.
+-- When DIOBM_EX_SETTING is specified to dwClock of the 
+   DIOBMCONFEX structure, internal clock cycle may not 
+   be configured by using dwClockMulti on the PCI-2772C.
+
+Version: 01.01-03
+Date: March 2003
+The following malfunctions were fixed.
+[Windows XP/2000/NT/Me/98/95]
+-- The REQ1 pulse width may not be configured correctly 
+   at the DI request mode on the PCI-2772C.
+-- The EXT signal may not be assigned correctly on the 
+   PCI-2772C.
+-- A parameter error may occur on the PCI-2772C when 
+   configuring the EXT11 through EXT22 signals. 
+-- Two or more control signals on the PCI-2772C may not 
+   be controlled by using the SetLine funciton.
+-- The DIOBM_CLK_EXT code may not be reflected to the DO 
+   setting correctly with an external clock setting in the 
+   DioBmSetDeviceConfig or DioBmSetDeviceCofigEx function.
+
+[Windows Me/98/95]
+-- An error may occur when the DioBmOutputDword function is 
+   used for the DO section on the PCI-2772C.
+
+Version: 01.00-02
+Date: August 2002
+Revisions to the preliminary draft
+
+Version: 00.90-01
+Date: November 2001
+Online Help preliminary draft

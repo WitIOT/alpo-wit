@@ -1,0 +1,235 @@
+; GPC29111.INF
+;
+; Installation inf for the LPC-291144, LPC-292144, PEX-291144, PEX-292144
+;
+
+[Version]
+DriverVer   = 01/18/2016,03.20.32.00
+Signature   = "$CHICAGO$"
+Class       = MultiFunction
+Provider    = %Interface%
+ClassGUID   = {4d36e971-e325-11ce-bfc1-08002be10318}
+LayoutFile  = layout.inf
+CatalogFile = Gpc29111.cat
+
+; ----------------------------------------------------------
+;	Install class "MultiFunction"
+; ----------------------------------------------------------
+[ClassInstall]
+AddReg = ClassAddReg
+
+[ClassAddReg]
+HKR,,,,%MFClassName%
+
+; ----------------------------------------------------------
+;	MultiFunction Devices
+; ----------------------------------------------------------
+[Manufacturer]
+%Interface% = Interface.Mfg,NTamd64
+
+[ControlFlags]
+ExcludeFromSelect = PCI\VEN_1147&DEV_0B5F&SUBSYS_20AC1147
+ExcludeFromSelect = PCI\VEN_1147&DEV_0B69&SUBSYS_20AC1147
+ExcludeFromSelect = PCI\VEN_1147&DEV_0B5F&SUBSYS_2CAC1147
+ExcludeFromSelect = PCI\VEN_1147&DEV_0B69&SUBSYS_2CAC1147
+
+[Interface.Mfg]
+"Interface LPC-291144" = LPCMF291144.mf, PCI\VEN_1147&DEV_0B5F&SUBSYS_20AC1147
+"Interface LPC-292144" = LPCMF292144.mf, PCI\VEN_1147&DEV_0B69&SUBSYS_20AC1147
+"Interface PEX-291144" = PEXMF291144.mf, PCI\VEN_1147&DEV_0B5F&SUBSYS_2CAC1147
+"Interface PEX-292144" = PEXMF292144.mf, PCI\VEN_1147&DEV_0B69&SUBSYS_2CAC1147
+
+[Interface.Mfg.NTamd64]
+"Interface LPC-291144" = LPCMF291144.mf, PCI\VEN_1147&DEV_0B5F&SUBSYS_20AC1147
+"Interface LPC-292144" = LPCMF292144.mf, PCI\VEN_1147&DEV_0B69&SUBSYS_20AC1147
+"Interface PEX-291144" = PEXMF291144.mf, PCI\VEN_1147&DEV_0B5F&SUBSYS_2CAC1147
+"Interface PEX-292144" = PEXMF292144.mf, PCI\VEN_1147&DEV_0B69&SUBSYS_2CAC1147
+
+
+; ----------------------------------------------------------
+;	LPC-291144 Sections
+; ----------------------------------------------------------
+; --- win2000, xp ---
+[LPCMF291144.mf]
+Include = mf.inf
+Needs = MFINSTALL.mf
+
+[LPCMF291144.mf.HW]
+AddReg = LPCMF291144.mf.RegHW
+
+[LPCMF291144.mf.RegHW]
+HKR,Child0000,HardwareID,,MF\LPC291144_DO
+HKR,Child0000,ResourceMap,1,00,01,04,05,06
+HKR,Child0001,HardwareID,,MF\LPC291144_DI
+HKR,Child0001,ResourceMap,1,00,01,02,03,06
+
+[LPCMF291144.mf.Services]
+Include = mf.inf
+Needs = MFINSTALL.mf.Services
+
+; --- win64 ---
+[LPCMF291144.mf.ntamd64]
+Include = mf.inf
+Needs = MFINSTALL.mf
+
+[LPCMF291144.mf.ntamd64.HW]
+AddReg = LPCMF291144.mf.ntamd64.RegHW
+
+[LPCMF291144.mf.ntamd64.RegHW]
+HKR,Child0000,HardwareID,,MF\LPC291144_DO
+HKR,Child0000,ResourceMap,1,00,01,04,05,06
+HKR,Child0001,HardwareID,,MF\LPC291144_DI
+HKR,Child0001,ResourceMap,1,00,01,02,03,06
+
+[LPCMF291144.mf.ntamd64.Services]
+Include = mf.inf
+Needs = MFINSTALL.mf.Services
+
+; ----------------------------------------------------------
+;	LPC-292144 Sections
+; ----------------------------------------------------------
+; --- win2000, xp ---
+[LPCMF292144.mf]
+Include = mf.inf
+Needs = MFINSTALL.mf
+
+[LPCMF292144.mf.HW]
+AddReg = LPCMF292144.mf.RegHW
+
+[LPCMF292144.mf.RegHW]
+HKR,Child0000,HardwareID,,MF\LPC292144_DO
+HKR,Child0000,ResourceMap,1,00,01,04,05,06
+HKR,Child0001,HardwareID,,MF\LPC292144_DI
+HKR,Child0001,ResourceMap,1,00,01,02,03,06
+
+[LPCMF292144.mf.Services]
+Include = mf.inf
+Needs = MFINSTALL.mf.Services
+
+; --- win64 ---
+[LPCMF292144.mf.ntamd64]
+Include = mf.inf
+Needs = MFINSTALL.mf
+
+[LPCMF292144.mf.ntamd64.HW]
+AddReg = LPCMF292144.mf.ntamd64.RegHW
+
+[LPCMF292144.mf.ntamd64.RegHW]
+HKR,Child0000,HardwareID,,MF\LPC292144_DO
+HKR,Child0000,ResourceMap,1,00,01,04,05,06
+HKR,Child0001,HardwareID,,MF\LPC292144_DI
+HKR,Child0001,ResourceMap,1,00,01,02,03,06
+
+[LPCMF292144.mf.ntamd64.Services]
+Include = mf.inf
+Needs = MFINSTALL.mf.Services
+
+
+; ----------------------------------------------------------
+;	PEX-291144 Sections
+; ----------------------------------------------------------
+
+; --- win2000, xp ---
+[PEXMF291144.mf]
+Include = mf.inf
+Needs = MFINSTALL.mf
+
+[PEXMF291144.mf.HW]
+AddReg = PEXMF291144.mf.RegHW
+
+[PEXMF291144.mf.RegHW]
+HKR,Child0000,HardwareID,,MF\PEX291144_DO
+HKR,Child0000,ResourceMap,1,00,01,04,05,06
+HKR,Child0001,HardwareID,,MF\PEX291144_DI
+HKR,Child0001,ResourceMap,1,00,01,02,03,06
+
+[PEXMF291144.mf.Services]
+Include = mf.inf
+Needs = MFINSTALL.mf.Services
+
+; --- win64 ---
+[PEXMF291144.mf.ntamd64]
+Include = mf.inf
+Needs = MFINSTALL.mf
+
+[PEXMF291144.mf.ntamd64.HW]
+AddReg = PEXMF291144.mf.ntamd64.RegHW
+
+[PEXMF291144.mf.ntamd64.RegHW]
+HKR,Child0000,HardwareID,,MF\PEX291144_DO
+HKR,Child0000,ResourceMap,1,00,01,04,05,06
+HKR,Child0001,HardwareID,,MF\PEX291144_DI
+HKR,Child0001,ResourceMap,1,00,01,02,03,06
+
+[PEXMF291144.mf.ntamd64.Services]
+Include = mf.inf
+Needs = MFINSTALL.mf.Services
+
+; ----------------------------------------------------------
+;	PEX-292144 Sections
+; ----------------------------------------------------------
+
+; --- win2000, xp ---
+[PEXMF292144.mf]
+Include = mf.inf
+Needs = MFINSTALL.mf
+
+[PEXMF292144.mf.HW]
+AddReg = PEXMF292144.mf.RegHW
+
+[PEXMF292144.mf.RegHW]
+HKR,Child0000,HardwareID,,MF\PEX292144_DO
+HKR,Child0000,ResourceMap,1,00,01,04,05,06
+HKR,Child0001,HardwareID,,MF\PEX292144_DI
+HKR,Child0001,ResourceMap,1,00,01,02,03,06
+
+[PEXMF292144.mf.Services]
+Include = mf.inf
+Needs = MFINSTALL.mf.Services
+
+; --- win64 ---
+[PEXMF292144.mf.ntamd64]
+Include = mf.inf
+Needs = MFINSTALL.mf
+
+[PEXMF292144.mf.ntamd64.HW]
+AddReg = PEXMF292144.mf.ntamd64.RegHW
+
+[PEXMF292144.mf.ntamd64.RegHW]
+HKR,Child0000,HardwareID,,MF\PEX292144_DO
+HKR,Child0000,ResourceMap,1,00,01,04,05,06
+HKR,Child0001,HardwareID,,MF\PEX292144_DI
+HKR,Child0001,ResourceMap,1,00,01,02,03,06
+
+[PEXMF292144.mf.ntamd64.Services]
+Include = mf.inf
+Needs = MFINSTALL.mf.Services
+
+
+; -------------------------------------------------------
+;	MultiFunction Service Install Sections
+; -------------------------------------------------------
+[mf_Service_Inst]
+ServiceType    = 1
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %12%\mf.sys
+LoadOrderGroup = System Bus Extender
+
+[mf.CopyFiles]
+mf.sys,,,2
+
+[DestinationDirs]
+mf.CopyFiles = 12   ; system32\drivers
+
+[StandardMF.Reg]
+HKR,,DevLoader,,*CONFIGMG
+HKR,,Enumerator,,*CONFIGMG
+
+; ---------------------------------------------------------
+;	Strings
+;----------------------------------------------------------
+[Strings]
+Interface = "Interface Corporation"
+MFClassName = "Multifunction Devices"
+

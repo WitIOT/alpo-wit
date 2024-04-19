@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" ?>
+  <dpinst>
+    <search>
+      <subDirectory>*</subDirectory>
+    </search>
+    <language code="0x401"><!-- Arabic (Saudi Arabia) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x804"><!-- Chinese (People's Republic of China) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x404"><!-- Chinese (Taiwan) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x405"><!-- Czech (Czech Republic) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x406"><!-- Danish (Denmark) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x407"><!-- German (Germany) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x408"><!-- Greek (Greece) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x409"><!-- English (United States) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0xC0A"><!-- Spanish - Modern Sort (Spain) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x40B"><!-- Finnish (Finland) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x40C"><!-- French (France) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x40D"><!-- Hebrew (Israel) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x40E"><!-- Hungarian (Hungary) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x410"><!-- Italian (Italy) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x411"><!-- Japanese (Japan) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x412"><!-- Korean (Korea) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x414"><!-- Norwegian (Bokmal) (Norway) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x413"><!-- Dutch (Netherlands) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x415"><!-- Polish (Poland) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x416"><!-- Portuguese (Brazil) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x816"><!-- Portuguese (Portugal) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x419"><!-- Russian (Russia) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x41D"><!-- Swedish (Sweden) -->
+      <eula type="" path="" />
+    </language>
+    <language code="0x41F"><!-- Turkish (Turkey) -->
+      <eula type="" path="" />
+    </language>
+
+<!-- The following three elements customize, but do not localize,
+     the icon and bitmaps that appear on the DPInst wizard pages. -->
+    <icon>Install.ico</icon>
+    <headerPath>Interface.bmp</headerPath>
+    <watermarkPath>InterfaceBoard.bmp</watermarkPath>
+
+<!-- DPInst Options -->
+    <legacyMode/>
+    <deleteBinaries/>
+    <forceIfDriverIsNoBetter/>
+
+    <suppressEulaPage/>
+    <suppressWizard/>
+    <suppressAddRemovePrograms/>
+
+</dpinst>

@@ -1,0 +1,249 @@
+ALPAO DRIVER & SDK
+==================
+
+Revision
+--------
+Version: 4.01.11
+SHA-1:   7091059
+
+
+Changelog
+---------
+
+4.01.11
+    - Adds libraries for ARM aarch64.
+    - Fixes Linux Makefile for building samples.
+
+4.01.10
+    - Fixes Linux ASDK library name.
+
+4.01.08
+    - Builds libcurl with minimimum requirements,
+    - Binds ASDK statically to libcurl,
+    - Improves multi rack support.
+
+4.01.07
+    - Adds python 3.11 support
+
+4.01.03
+4.01.02
+    - Update Linux library.
+
+4.01.01
+4.01.00
+    - Add SetVector to MATLAB Mexfile
+
+4.00.00
+    - Add DEv8 DMM support
+
+3.08.18
+    - Add USB alternative driver
+
+3.08.17
+    - Add support for LabVIEW 2020 32 and 64-bits
+
+3.08.16
+    - Add Get commands for Vector (LastCommand)
+    - Update drawings
+
+3.08.15
+    - Add Python 3.8 support
+
+3.08.14
+    - Update Adlink PCIS-DASK driver
+
+3.08.13
+  - Improve setup
+  - Documentation update
+
+3.08.09, 3.08.10, 3.08.11, 3.08.12
+  - Documentation update
+
+3.08.08
+  - Add Gbit interface support
+
+3.08.07
+  - Add support of dm.Set(string, vector)
+
+3.08.06
+  - Python 3 support
+  - Displays PEX in the install menu
+
+3.08.04
+  - Modified for PCIE-7350 only; pattern repeat should be equal
+    to the number of patterns when used with trigger-input
+
+3.08.03
+  - Fixed Linux libraries version
+
+3.08.02
+  - Updated USB drivers for Windows
+
+3.08.01
+  - Fixed command clipping of Alpao Drive Electronics version 7
+
+3.08.00
+  - Added compatibility of Alpao Drive Electronics version 7
+  - Fixed PEX292144 time limits
+
+3.07.01
+  - Fixed USB driver installation
+  - Added timeout parameter for PEX292144
+
+3.07
+  - Added command to change DAC gain
+  - Updated Visual Studio C++ redistributable to 2013 (12.0)
+
+3.06
+  - Updated GPF-2X72C drivers (Windows drivers for PEX-292144)
+  - Added binary utility to apply Zernike without Matlab
+
+3.05.04
+  - Fixed issue with PEX292144 causing time limit exceeding
+
+3.05.03
+  - Added keyword for mirror version 005
+
+3.05.02
+  - Added property to disable mirror reset when object is deleted
+
+3.05.01
+  - Fixed PEX-292144 for intensive use
+
+3.05
+  - Added support of trigger input for PEX-292144 (falling edge only)
+
+3.04.02
+  - Fixed PEX-292144 interface
+  - Fixed command issue introduced in previous version
+
+3.04.01
+  - Fixed offset in command
+  - Added PEX-292144 interface from Amita Interface Sol.
+
+3.04
+  - Improved quick start guide layout
+
+3.03.07
+  - Downgraded Adlink drivers to 5.10.2 for Windows XP only
+
+3.03.06
+  - Modified Eth time-out warning is now an error
+  - Fixed Eth interface shouldn't wait for an acknowledgment in ASynchronous mode
+
+3.03.05
+  - Fixed utility installation
+
+3.03.04
+  - Updated Adlink PCIS-DASK from 5.10.2 to 5.11.3
+
+3.03.03
+  - Added trigger-input for ethernet/usb interfaces (optional)
+  - Improved speed
+
+3.03.02
+  - Fixed Linux libraries names
+
+3.03.01
+  - Upgraded IDE to VC11 Update4
+  - Added Visual redistribuables
+  - Fixed issue with LED boxes
+  - Fixed missing USB drivers for Windows XP
+
+3.03
+  - Restored Linux compatibility
+  - Fixed invalid timout on Ethernet/USB
+
+3.02
+  - Added trigger input (optional) using Adlink PCIe-7350
+  - Fixed command "CheckElectronic"
+  - Restored Python 2.7 example
+
+3.01
+  - Fixed an issue on the thermal safety
+
+3.00
+  - Complete overhaul of the source code (SDK is now object oriented)
+  - Added support for new interfaces:
+    + Adlink PCIe-7350
+    + Ethernet
+    + USB
+  - Linux is not yet supported
+  - Updated Adlink PCIS-DASK from 5.3 to 5.10.2
+
+2.13
+ Added:
+  - Automatic installer for Windows
+  - Adlink PCIS-DASK drivers
+  - Function reference (HTML)
+  - Python samples (with SWIG interface)
+  - Installation note (Readme.txt)
+ Deleted:
+  - DLLs compiled with MinGW
+ Improved:
+  - Fixed some bugs when handling multiple mirrors
+
+2.12
+ Added:
+  - Linux libraries
+  - Win64 libraries
+  - "Const" attribute on read-only parameters
+ Updated:
+  - Headers readability
+ Moved:
+  - Configuration files are now only in "config" folder
+ Fixed:
+  - An timeout error is raised if the Send command never ends
+
+2.11
+ Added:
+  - Some examples
+
+2.10
+ New:
+  - Changed serial number format, from "alpaoXXDMYY-ZZ-AAA" to "BXXYYY"
+
+2.09
+ Improved:
+  - Documentation of samples
+
+2.08
+ Fixed:
+  - Trigger signal is now handled by electronic box
+
+2.07
+ Improved:
+  - Fully compliant with Adlink PCI7300 cards
+
+2.06
+ Added:
+  - Support of pattern generation with PCI7300 card
+
+2.05
+ Fixed:
+  - Warm Up after initialization
+
+2.04
+ Fixed:
+  - Bug with multi-dm initialization
+
+2.03
+ Fixed:
+  - Minor bug
+
+2.02
+ Added:
+  - Switch on/off trigger signal
+
+2.01
+ Updated:
+  - Function API
+
+2.00
+ Added:
+  - Configuration files
+  - Multi-DM support
+
+1.*
+ Note:
+  Versions prior than 2.0 are mirror dependent and cannot be used with other mirrors
